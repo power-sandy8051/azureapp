@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <form action="/analyse" method="POST"  style="padding: 1em;" enctype="multipart/form-data" id="analyseform" onsubmit="return validate()">
+        <label for="formFile" class="form-label">Upload your Metric Excel File</label>
+        <input class="form-control" type="file" name="excelFile" required id="excelFile">
+        <center style="padding: 1em;">
+            <button type="submit" class="btn btn-primary">Analyse</button>
+            <br> <br>
+            <div class="spinner-border" role="status" id="spin" style="display: none;"></div>
+        </center>
+    </form>    
+{% endblock %}

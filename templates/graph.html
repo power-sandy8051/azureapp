@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <ul>
+        {% for file in files %}
+            <br>
+            <img src="static/{{ file }}" alt="{{ file }}">
+            <br>
+        {% else %}
+            <h4>Sorry! you have no VMs onboarded</h4>
+        {% endfor %}
+    </ul>
+{% endblock %}
